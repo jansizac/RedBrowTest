@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+    redbrowtest.api.web:
+        depends_on:
+            - db
+        image: ${DOCKER_REGISTRY-}redbrowtestapiweb
+        build:
+            context: .
+            dockerfile: RedBrowTest.API.Web/Dockerfile
+        ports:
+            - "5000:80"
+        environment:
+            - ConnectionStrings__RedBrowConnectionString=Server=db;Database=TR_DescargaMasivaCFDI;user id=${DATABASE_USER};password=${DATABASE_PASSWORD};TrustServerCertificate=True;
+        
+    db:
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        restart: always
+        environment:
+            SA_PASSWORD: "${DATABASE_PASSWORD}"
+            ACCEPT_EULA: "Y"
+        ports:
+            - "${MSSQL_PORT}:1433"
