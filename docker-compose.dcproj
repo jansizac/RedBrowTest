@@ -15,5 +15,9 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="sqlscripts\init.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SqlScripts\" />
   </ItemGroup>
 </Project>
