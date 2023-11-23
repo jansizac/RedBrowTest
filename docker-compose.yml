@@ -11,7 +11,7 @@ services:
         ports:
             - "6002:80"
         environment:
-            - ConnectionStrings__RedBrowConnectionString=Server=db;Database=TR_DescargaMasivaCFDI;user id=${DATABASE_USER};password=${DATABASE_PASSWORD};TrustServerCertificate=True;
+            - ConnectionStrings__RedBrowConnectionString=Server=db;Database=RedBrowTest;user id=${DATABASE_USER};password=${DATABASE_PASSWORD};TrustServerCertificate=True;
         
     db:
         image: mcr.microsoft.com/mssql/server:2019-latest
