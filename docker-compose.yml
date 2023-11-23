@@ -9,7 +9,7 @@ services:
             context: .
             dockerfile: RedBrowTest.API.Web/Dockerfile
         ports:
-            - "5000:80"
+            - "6002:80"
         environment:
             - ConnectionStrings__RedBrowConnectionString=Server=db;Database=TR_DescargaMasivaCFDI;user id=${DATABASE_USER};password=${DATABASE_PASSWORD};TrustServerCertificate=True;
         
