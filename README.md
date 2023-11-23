@@ -13,16 +13,16 @@ Para ejecutar este proyecto, necesitarás tener instalados los siguientes compon
 Se proporcionará un archivo `.env` con todas las variables de entorno necesarias configuradas. Asegúrate de que este archivo esté en el directorio raíz del proyecto antes de iniciar la aplicación.
 
 ## Ejecución de la Aplicación
-Para iniciar la aplicación y la base de datos SQL Server, ejecuta los siguientes comandos en la terminal desde el directorio raíz del proyecto:
+Para iniciar la aplicación y la base de datos SQL Server, abre la solucion en visual studio, selecciona como proyecto de inicio el proyecto de docker-compose y ejecuta la solucion.
+
+Alternativamente, puedes ejecutar los siguientes comandos en la terminal desde el directorio raíz del proyecto:
 
 ```bash
 docker-compose build
 docker-compose up
 ```
 
-Esto iniciará todos los servicios necesarios definidos en el archivo docker-compose.yml.
-
-O si prefieres ejecutarlo desde VS2022, abre la solución, selecciona como proyecto de inicio el proyecto docker-compose y ejecutalo.
+Esto iniciará todos los servicios necesarios definidos en el archivo docker-compose.yml, pero probablemente haya problemas al leventar el API por los certificados SSL, te recomiendo que lo ejecutes en VS2022.
 
 ## Acceso a la API
 Una vez que la aplicación esté en ejecución, podrás acceder a ella usando la url que se abrira al ejecutarla
